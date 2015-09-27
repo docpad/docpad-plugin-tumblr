@@ -200,11 +200,11 @@ module.exports = (BasePlugin) ->
 							return complete(err)  if err
 
 							# Log
-							if document
+							if document?
 								++imported
 								docpad.log('debug', "Imported  tumblr post #{i}/#{tumblrPosts.length}: #{document.getFilePath()}")
 							else
-								docpad.log('debug', "Skipped   tumblr post #{i}/#{tumblrPosts.length}: #{document.getFilePath()}")
+								docpad.log('debug', "Skipped   tumblr post #{i}/#{tumblrPosts.length}")
 
 							# Complete
 							return complete()
